@@ -34,7 +34,7 @@ back to a rule parser and composes from templates.
 ## Use
 
 ```python
-from dynaprod.service import DynaProd
+from dynaprod import DynaProd
 
 svc = DynaProd(domain, snapshot)                 # snapshot: fitted world model and calibrator
 quote = svc.estimate(request, now=0)             # options with coverage, cost and time bounds
@@ -57,10 +57,11 @@ dynaprod/
                    audits, options
   domains/         Earth observation, sensor panels, documents
   llm/             cached OpenRouter client
+  config.py        worker rates, levels, world-model settings
   service.py       snapshots, quotes, delivery, audits
-configs/           settings
+configs/           how to override the settings
+tests/             unit tests
 ```
-
 
 ## License
 
